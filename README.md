@@ -1,3 +1,5 @@
+> This repo is not actively being maintained. Please use it at your own risk
+
 # Webpack RTL Plugin
 
 Webpack plugin to use in addition to [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to create a second css bundle, processed to be rtl.

@@ -1,0 +1,36 @@
+{
+	"name": "webpack-rtl-plugin",
+	"version": "6.0.0",
+	"description": "Webpack plugin to produce a rtl css bundle.",
+	"main": "src/index.js",
+	"author": "Romain Berger <romain@romainberger.com>",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/romainberger/webpack-rtl-plugin.git"
+	},
+	"bugs": "https://github.com/romainberger/webpack-rtl-plugin/issues",
+	"homepage": "https://github.com/romainberger/webpack-rtl-plugin",
+	"keywords": [
+		"webpack",
+		"css",
+		"rtl"
+	],
+	"files": [
+		"src"
+	],
+	"license": "GPL-2.0-or-later",
+	"devDependencies": {
+		"css-loader": "^6.5.1",
+		"mini-css-extract-plugin": "^1.6.2",
+		"webpack": "^5.68.0"
+	},
+	"peerDependencies": {
+		"webpack": "^5.68.0"
+	},
+	"dependencies": {
+		"rtlcss": "^3.1.2"
+	}
+}

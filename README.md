@@ -6,7 +6,7 @@ Webpack plugin to use in addition to [mini-css-extract-plugin](https://github.co
 
 This uses [rtlcss](https://github.com/MohammadYounes/rtlcss) under the hood, please refer to its documentation for supported properties.
 
-Originally forked from <https://github.com/romainberger/webpack-rtl-plugin>, commit aca883ad70671a5d2a90c676fe8ea60d42c8759b (tag v2.0.0).
+Originally forked from <https://github.com/romainberger/webpack-rtl-plugin>, commit aca883ad70671a5d2a90c676fe8ea60d42c8759b (tag v2.0.0). This is extended to make it compatible with Webpack v5
 
 Check out the [webpack-rtl-example](https://github.com/romainberger/webpack-rtl-example) to see an example of an app using the rtl-css-loader and webpack-rtl-plugin.
 

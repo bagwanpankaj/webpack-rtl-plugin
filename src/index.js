@@ -10,7 +10,7 @@ class WebpackRTLPlugin {
 			plugins: [],
 			...options,
 		};
-		this.cache = new WeakMap();
+		// this.cache = new WeakMap();
 	}
 
 	apply( compiler ) {
@@ -35,14 +35,19 @@ class WebpackRTLPlugin {
 								}
 
 								// Compute the filename
+								const baseFilename = asset;
+								console.log("baseFilename ", baseFilename);
 								const filename = asset.replace( cssRe, '.rtl$&' );
 								const assetInstance = assets[ asset ];
+								console.log("rtlFilename ", filename);
+								console.log("assetInstance: ", assetInstance);
 								chunk.files.add( filename );
 
-								if ( this.cache.has( assetInstance ) ) {
-									const cachedRTL = this.cache.get( assetInstance );
-									assets[ filename ] = cachedRTL;
-								} else {
+								// if ( this.cache.has( assetInstance ) ) {
+								// 	const cachedRTL = this.cache.get( assetInstance );
+								// 	assets[ filename ] = cachedRTL;
+								// 	console.log("if assetInstance1: ", assets);
+								// } else {
 									const baseSource = assetInstance.source();
 									const rtlSource = rtlcss.process(
 										baseSource,
@@ -50,9 +55,12 @@ class WebpackRTLPlugin {
 										this.options.plugins
 									);
 									// Save the asset
+									// assets[ baseFilename ] = new ConcatSource( baseSource );
 									assets[ filename ] = new ConcatSource( rtlSource );
-									this.cache.set( assetInstance, assets[ filename ] );
-								}
+									// this.cache.set( assetInstance, assets[ filename ] );
+									console.log("baseSource: ", assets[ baseFilename ], "\n\n\n");
+									console.log("rtlSource: ", assets[filename]);
+								// }
 							} )
 					);
 				}

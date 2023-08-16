@@ -58,8 +58,6 @@ class WebpackRTLPlugin {
 									// assets[ baseFilename ] = new ConcatSource( baseSource );
 									assets[ filename ] = new ConcatSource( rtlSource );
 									// this.cache.set( assetInstance, assets[ filename ] );
-									console.log("baseSource: ", assets[ baseFilename ], "\n\n\n");
-									console.log("rtlSource: ", assets[filename]);
 								// }
 							} )
 					);

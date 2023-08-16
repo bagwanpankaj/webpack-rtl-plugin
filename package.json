@@ -1,6 +1,6 @@
 {
 	"name": "webpack-rtl-plugin",
-	"version": "6.0.0",
+	"version": "6.0.1",
 	"description": "Webpack plugin to produce a rtl css bundle.",
 	"main": "src/index.js",
 	"author": "Romain Berger <romain@romainberger.com>",
